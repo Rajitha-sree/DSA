@@ -10,7 +10,7 @@ class Solution(object):
         count = 0
 
         for i in nums:
-            if cand == i:
+            if i == cand:
                 count+=1
             elif count == 0:
                 cand = i
