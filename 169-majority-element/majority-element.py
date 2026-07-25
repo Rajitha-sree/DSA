@@ -14,7 +14,7 @@ class Solution(object):
                 count+=1
             elif count == 0:
                 cand = i
-                count+=1
+                count=1
             else:
                 count-=1
 
