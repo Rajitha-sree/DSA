@@ -4,18 +4,19 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        #cand = nums[0]
+
+
+        cand = None
         count = 0
-        for i in range(len(nums)):
-            if count == 0:
-                cand =  nums[i]
-                #count+=1
-            if cand == nums[i]:
-                count +=1
-            elif cand != nums[i]:
-                #cand = i
+
+        for i in nums:
+            if cand == i:
+                count+=1
+            elif count == 0:
+                cand = i
+                count+=1
+            else:
                 count-=1
 
         return cand
-
         
