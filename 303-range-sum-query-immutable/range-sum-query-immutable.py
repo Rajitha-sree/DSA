@@ -9,7 +9,7 @@ class NumArray(object):
         for i in nums:
             sum = sum + i
             self.ps.append(sum)
-        
+
 
     def sumRange(self, left, right):
         """
@@ -20,6 +20,8 @@ class NumArray(object):
         if left == 0:
             return self.ps[right]
         return self.ps[right]- self.ps[left-1]
+        
+            
         
 
 
