@@ -10,9 +10,6 @@ class Solution(object):
                 dict[i] = 1
             else:
                 dict[i] += 1
-
-        for values in dict.values():
-            if values >= 2:
                 return True
 
         return False
