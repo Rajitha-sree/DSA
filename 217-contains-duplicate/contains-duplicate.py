@@ -4,13 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        dict = {}
+        s = set()
+
         for i in nums:
-            if i not in dict:
-                dict[i] = 1
-            else:
-                dict[i] += 1
+            if i in s:
                 return True
+            s.add(i)
 
         return False
         
