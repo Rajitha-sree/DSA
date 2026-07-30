@@ -22,9 +22,8 @@ class Solution(object):
         # max_sum = 0
         # for i in nums:
         #     pref_sum += i
+        #     max_sum = max(max_sum,pref_sum)
         #     if pref_sum < 0:
         #         pref_sum = 0
-        #     else:
-        #         max_sum = max(max_sum,pref_sum)
         
         # return max_sum
