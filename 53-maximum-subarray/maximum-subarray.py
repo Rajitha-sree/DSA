@@ -4,16 +4,27 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        c_sum = 0
-        b_sum = 0
+        hm = {0:-1}
+        max_s = -2147483648
+        pref_sum = 0
+        prev_sum = 0
+        for i in range(len(nums)):
+            pref_sum += nums[i]
+            max_s = max(pref_sum,max_s)
+            if pref_sum < 0:
+                pref_sum = 0
+            # if pref_sum in hm:
+            #     hm[pref_sum] += 1
 
-        if (all(x<0 for x in nums)):
-            return max(nums)
-        else:
-            for i in nums:
-                c_sum = max(i,c_sum+i)
-                b_sum = max(c_sum,b_sum)
+        return max_s
 
-            return b_sum
+        # pref_sum = 0
+        # max_sum = 0
+        # for i in nums:
+        #     pref_sum += i
+        #     if pref_sum < 0:
+        #         pref_sum = 0
+        #     else:
+        #         max_sum = max(max_sum,pref_sum)
         
-        
+        # return max_sum
