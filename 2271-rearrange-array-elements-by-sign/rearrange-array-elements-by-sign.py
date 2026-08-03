@@ -6,14 +6,16 @@ class Solution(object):
         """
         pos = 0
         neg = 1
-        n = 0
-        a=[]
+        n = len(nums)
+        a = [0] * n
         for i in nums:
             if i>0:
-                a.insert(pos,i)
+                
+                a[pos] = i
                 pos+=2
             elif i<0:
-                a.insert(neg,i)
+                
+                a[neg] = i
                 neg+=2
 
         return a
