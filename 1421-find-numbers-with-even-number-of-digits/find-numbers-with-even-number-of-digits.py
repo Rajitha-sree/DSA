@@ -6,11 +6,11 @@ class Solution(object):
         """
         n = len(nums)
         count = 0
-        for i in range(n):
+        for i in nums:
             c = 0
-            while(nums[i]>0):
+            while(i>0):
                 c+=1
-                nums[i]=nums[i]//10
+                i=i//10
             if(c%2==0):
                 count+=1
         
