@@ -3,7 +3,7 @@ class Solution:
         y = 0
         for i in range(n):
             x = start + 2*i
-            y = y^x
+            y ^= x
 
         return y
         
